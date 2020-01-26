@@ -1,0 +1,11 @@
+#!/bin/bash
+
+tmux new-window
+tmux send-keys "nvim ${1}" C-m
+tmux send-keys "\rf" C-m
+tmux split-window  -h 
+tmux send-keys 'sleep 2 ; tmux wait-for -S finish-command' C-m
+tmux wait-for finish-command
+tmux send-keys 'R' C-m
+tmux select-pane -L
+
