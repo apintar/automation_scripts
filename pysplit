@@ -4,8 +4,8 @@ tmux new-window
 tmux send-keys "source ~/pyvenvs/${1}/bin/activate" C-m
 tmux send-keys "nvim ${2}" C-m
 tmux split-window  -h 
-tmux send-keys 'sleep 2 ; tmux wait-for -S finish-command' C-m
-tmux wait-for finish-command
+# tmux send-keys 'sleep 2 ; tmux wait-for -S finish-command' C-m
+# tmux wait-for finish-command
 tmux send-keys "source ~/pyvenvs/${1}/bin/activate" C-m
 tmux send-keys 'ipython' C-m
 tmux select-pane -t 0
