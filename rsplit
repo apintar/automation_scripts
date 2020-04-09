@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 tmux new-window
 tmux send-keys "nvim ${1}" C-m

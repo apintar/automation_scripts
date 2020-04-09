@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 tmux new-window 
 tmux send-keys "source ~/pyvenvs/${1}/bin/activate" C-m
